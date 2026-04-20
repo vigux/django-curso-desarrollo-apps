@@ -8,7 +8,7 @@ class Carrera(models.Model):
         ('vr', 'Virtual'),        
     ]
 #[('presencial', 'Presencial'), ('virtual', 'Virtual')]
-    nombre = models.CharField(max_length=30)
+    nombre = models.CharField(max_length=50)
     clave = models.CharField(max_length=15)
     modalidad = models.CharField(max_length=10, choices=MODALIDADES)
     

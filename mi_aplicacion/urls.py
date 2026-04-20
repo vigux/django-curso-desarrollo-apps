@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -12,3 +14,5 @@ urlpatterns = [
     path('carreras/crear/', views.crear_carrera, name='crear_carrera'),
     path('carreras/', views.lista_carreras, name='lista_carreras'),    
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
