@@ -1,4 +1,4 @@
-##Curso para desarrollar una aplicación web con el framework django
+## Curso para desarrollar una aplicación web con el framework django
 
 # Revisar versión de Python
 Python --version
@@ -50,7 +50,7 @@ waitress-serve --port=8000 mi_proyecto.wsgi:application
 # Comando para verificar direccion ip local
 ipconfig
 
-# Desde el navegador accedemos con la direccion ip de la red local y probamos que todo funcione correctamente
+Desde el navegador accedemos con la direccion ip de la red local y probamos que todo funcione correctamente
 
 # Comando para generar archivo de requerimientos:
 pip freeze > requirements.txt
