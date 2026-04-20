@@ -1,36 +1,36 @@
-## Curso para desarrollar una aplicación web con el framework django
+# Curso para desarrollar una aplicación web con el framework django
 
-# Revisar versión de Python
+## Revisar versión de Python
 Python --version
 
-# Crear entorno virtual
+## Crear entorno virtual
  python -m venv .venv
 
- # Activamos el entorno virtual
+## Activamos el entorno virtual
 .venv\Scripts\activate
 
-# Upgrade pip 
+## Upgrade pip 
 python -m pip install --upgrade pip
 
-# Instalar el cliente de MySQL
+## Instalar el cliente de MySQL
 pip uninstall mysqlclient -y; pip install --only-binary :all: mysqlclient
 
-# instalar requirements
+## instalar requirements
  pip install -r requierements.txt
 
-# Realizar migraciones
+## Realizar migraciones
 python manage.py migrate
 
-# Crear Super usuario y establecer una contraseña
+## Crear Super usuario para el panel Administrador y establecer una contraseña
 python manage.py createsuperuser
 
-# Habilitar Hosts
+## Habilitar Hosts
 ALLOWED_HOSTS = ['*']
 
-# Agregar Middleware whitenose  
+## Agregar Middleware whitenose  
 'whitenoise.middleware.WhiteNoiseMiddleware',  # Add Whitenoise for static files
 
-# Configurar rutas estaticas 
+## Configurar rutas estaticas 
 'DIRS': [BASE_DIR / 'templates'],
 
 STATICFILES_DIRS = [
@@ -40,17 +40,17 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Recopilar estaticos
+## Recopilar estaticos
 python manage.py collectstatic --noinput
 
-# Ejecutar servidor web
+## Ejecutar servidor web
 cd mi_proyecto
 waitress-serve --port=8000 mi_proyecto.wsgi:application
 
-# Comando para verificar direccion ip local
+## Comando para verificar direccion ip local
 ipconfig
 
 Desde el navegador accedemos con la direccion ip de la red local y probamos que todo funcione correctamente
 
-# Comando para generar archivo de requerimientos:
+## Comando para generar archivo de requerimientos:
 pip freeze > requirements.txt
